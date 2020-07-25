@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "e6ede5de-8083-4533-9a1a-4a173beb2a4c",
+		"name": "Bonaparte",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Titles",
+			"item": [
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"primary_title\": \"BLA BLA BLA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/title",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"title"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"primary_title\": \"BLA BLA BLA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/title/tt7001595",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"title",
+								"tt7001595"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"primary_title\": \"Miss\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/title/tt7001595",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"title",
+								"tt7001595"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 10,\n    \"code\": \"tt0000011\",\n    \"title_type\": \"short\",\n    \"primary_title\": \"Akrobatisches Potpourri\",\n    \"original_title\": \"Akrobatisches Potpourri\",\n    \"is_adult\": 0,\n    \"start_year\": 1895,\n    \"end_year\": null,\n    \"runtime\": 1,\n    \"genres\": \"Documentary,Short\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/title/tt0000011",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"title",
+								"tt0000011"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 10,\n    \"title_type\": \"short\",\n    \"primary_title\": \"BLA BLA BLA\",\n    \"original_title\": \"Akrobatisches Potpourri\",\n    \"is_adult\": 0,\n    \"start_year\": 1895,\n    \"end_year\": null,\n    \"runtime\": 1,\n    \"genres\": \"Documentary,Short\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{app_url}}/title",
+							"host": [
+								"{{app_url}}"
+							],
+							"path": [
+								"title"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
