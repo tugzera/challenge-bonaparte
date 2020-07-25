@@ -9,3 +9,14 @@ tmp
 
 # The development sqlite file
 database/*.sqlite
+
+mysql-db
+
+#dataset file
+title.basics.tsv
+#converted file
+title_basics.csv
+#dataset file
+title.ratings.tsv
+#converted file
+title_ratings.csv
