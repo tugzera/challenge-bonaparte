@@ -12,6 +12,14 @@ class Title extends Model {
     return false
   }
 
+  static get createdAtColumn () {
+    return null
+  }
+ 
+  static get updatedAtColumn () {
+    return null
+  }
+
   rating() {
     return this.hasMany('App/Models/Rating', 'code', 'title_id')
   }
