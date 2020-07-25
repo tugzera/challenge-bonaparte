@@ -26,7 +26,7 @@ class TitleController {
   async store({ request }) {
     const count = await Title.query().count()
     const data = request.all()
-    data.code = `tt${count[0]['count(*)']+1}`
+    data.code = `tt${count[0]['count(*)'] + 1}`
     const item = await Title.create(data)
     return item
   }
