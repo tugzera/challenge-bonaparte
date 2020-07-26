@@ -4,22 +4,24 @@ const Title = use('App/Models/Title')
 
 class TitleController {
   async index({ request }) {
-    const { primary_title, page } = request.all()
-    if (primary_title) {
+    const { search, page } = request.all()
+    if (search) {
       const items = await Title.query()
         .with('rating')
-        .where('primary_title', 'LIKE', '%' + primary_title + '%')
-        .orWhere('original_title', 'LIKE', '%' + primary_title + '%')
-        .paginate(page ? page : 1, 10)
+        .where('primary_title', 'LIKE', '%' + search + '%')
+        .orWhere('original_title', 'LIKE', '%' + search + '%')
+        .paginate(page && page ? page : 1, 10)
       return items
     }
-    const items = await Title.query().with('rating').paginate(2, 10)
+    const items = await Title.query()
+      .with('rating')
+      .paginate(page && page ? page : 1, 10)
     return items
   }
 
   async show({ params }) {
-    const { id } = params
-    const item = await Title.query().where('code', id).firstOrFail()
+    const { code } = params
+    const item = await Title.query().where('code', code).firstOrFail()
     return item
   }
 
@@ -33,16 +35,16 @@ class TitleController {
 
   async update({ request, params }) {
     const data = request.all()
-    const { id } = params
-    const item = await Title.query().where('code', id).firstOrFail()
+    const { code } = params
+    const item = await Title.query().where('code', code).firstOrFail()
     item.merge(data)
     await item.save()
     return item
   }
 
   async destroy({ params }) {
-    const { id } = params
-    const item = await Title.query().where('code', id).firstOrFail()
+    const { code } = params
+    const item = await Title.query().where('code', code).firstOrFail()
     await item.delete()
   }
 }

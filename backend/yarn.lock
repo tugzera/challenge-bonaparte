@@ -796,6 +796,11 @@ co-compose@^4.0.0:
   dependencies:
     once "^1.4.0"
 
+collect.js@^4.28.2:
+  version "4.28.2"
+  resolved "https://registry.yarnpkg.com/collect.js/-/collect.js-4.28.2.tgz#08c11c48923641f7e86899adbd55aa31ed5de5b0"
+  integrity sha512-Ok2z0kuyywWJ4AtkeUI61pbSxCmaN5XYr/fkUYJP4bYk6Dz3NKH2FA8RhF7i3Do9Iq80MLRFWasSOpyE9X7hDA==
+
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"

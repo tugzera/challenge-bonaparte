@@ -20,4 +20,8 @@ Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
 
-Route.resource('/title', 'TitleController').apiOnly()
+Route.get('/titles:page?:search?', 'TitleController.index')
+Route.get('/titles/:code', 'TitleController.show')
+Route.post('/titles', 'TitleController.store')
+Route.patch('/title/:code', 'TitleController.update')
+Route.delete('/title/:code', 'TitleController.destroy')
