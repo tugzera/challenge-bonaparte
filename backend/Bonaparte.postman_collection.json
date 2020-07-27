@@ -18,7 +18,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"primary_title\": \"BLA BLA BLA\"\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -26,12 +26,22 @@
 							}
 						},
 						"url": {
-							"raw": "{{app_url}}/title",
+							"raw": "{{app_url}}/titles?page=1&search=Testemaster",
 							"host": [
 								"{{app_url}}"
 							],
 							"path": [
-								"title"
+								"titles"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "search",
+									"value": "Testemaster"
+								}
 							]
 						}
 					},
@@ -52,12 +62,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{app_url}}/title/tt7001595",
+							"raw": "{{app_url}}/titles/tt7001595",
 							"host": [
 								"{{app_url}}"
 							],
 							"path": [
-								"title",
+								"titles",
 								"tt7001595"
 							]
 						}
@@ -82,13 +92,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{app_url}}/title/tt7001595",
+							"raw": "{{app_url}}/titles/tt7072926",
 							"host": [
 								"{{app_url}}"
 							],
 							"path": [
-								"title",
-								"tt7001595"
+								"titles",
+								"tt7072926"
 							]
 						}
 					},
@@ -109,12 +119,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{app_url}}/title/tt0000011",
+							"raw": "{{app_url}}/titles/tt0000011",
 							"host": [
 								"{{app_url}}"
 							],
 							"path": [
-								"title",
+								"titles",
 								"tt0000011"
 							]
 						}
@@ -136,12 +146,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{app_url}}/title",
+							"raw": "{{app_url}}/titles",
 							"host": [
 								"{{app_url}}"
 							],
 							"path": [
-								"title"
+								"titles"
 							]
 						}
 					},
