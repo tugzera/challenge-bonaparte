@@ -28,7 +28,8 @@ class TitleController {
   async store({ request }) {
     const count = await Title.query().count()
     const data = request.all()
-    data.code = `tt${count[0]['count(*)'] + 1}`
+    data.is_adult = data.is_adult === 'true' ? true : false
+    data.code = `tt${count[0]['count(*)'] + Number(new Date().getTime())}`
     const item = await Title.create(data)
     return item
   }

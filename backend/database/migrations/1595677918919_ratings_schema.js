@@ -7,7 +7,7 @@ class RatingsSchema extends Schema {
   up() {
     this.create('ratings', (table) => {
       table.increments()
-      table.string('title_id').index()
+      table.string('title_id').index().unique()
       table
         .foreign('title_id')
         .references('code')

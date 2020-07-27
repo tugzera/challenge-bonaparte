@@ -21,7 +21,7 @@ class Title extends Model {
   }
 
   rating() {
-    return this.hasMany('App/Models/Rating', 'code', 'title_id')
+    return this.hasOne('App/Models/Rating', 'code', 'title_id')
   }
 }
 
